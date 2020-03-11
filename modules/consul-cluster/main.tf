@@ -44,6 +44,10 @@ resource "aws_autoscaling_group" "autoscaling_group" {
     },
     "${var.tags}",
   ]
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
