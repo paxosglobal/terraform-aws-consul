@@ -7,6 +7,11 @@ variable "cluster_name" {
   description = "The name of the Consul cluster (e.g. consul-stage). This variable is used to namespace all resources created by this module."
 }
 
+variable "strip_asg_name_prefix" {
+  description = "Whether to remove ASG name prefix"
+  default = false
+}
+
 variable "ami_id" {
   description = "The ID of the AMI to run in this cluster. Should be an AMI that had Consul installed and configured by the install-consul module."
 }
